@@ -1,0 +1,29 @@
+# Phase 1A — Audio Foundation
+numpy
+scipy
+sounddevice
+# sudo apt install pulseaudio-utils
+# sudo apt install libportaudio2
+
+# Phase 1C — Local Transcription
+faster-whisper
+pyyaml
+
+# Phase 1E — Gemini API Backend
+google-genai
+python-dotenv
+google-cloud-speech
+
+# Phase B — PyQt6 Overlay + AI Answerer
+PyQt6
+pynput
+
+# Phase 1B — VAD + Buffer Management
+# CPU-only torch build (saves ~1GB vs the default CUDA wheel):
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# Or install the default wheel (includes CUDA, larger download):
+#   pip install torch
+torch
+silero-vad
+
+# sudo apt install libxcb-cursor0
