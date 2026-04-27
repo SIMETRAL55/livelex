@@ -1,12 +1,12 @@
-# LiveRex — AI-Powered Meeting Assistant & Real-Time Transcription
+# LiveLex — Real-Time Meeting Transcription
 
-An AI-powered meeting assistant for Ubuntu that provides real-time speech transcription and context-aware answers. Captures audio from any browser or application and displays it in a modern, two-panel floating glass UI.
+A high-fidelity real-time speech transcription tool for Ubuntu that captures audio from any browser or application (Google Meet, Zoom, etc.) and displays live captions in a floating glass overlay.
 
 **Features:**
-- **AI Meeting Assistant** — Ask questions about the meeting or get automatic answers using Gemini 2.5 Flash.
-- **Massive Glass UI** — Always-on-top, transparent dual-panel display (Transcript + AI Answers).
+- **Massive Glass UI** — Always-on-top, transparent floating display with modern dark aesthetic.
 - **Dual Backends** — Local (Whisper) for privacy or Google Chirp 2 for ultra-low latency.
-- **Interactive Context** — Click any transcript line to trigger an AI deep-dive.
+- **Stable Streaming** — Uses LocalAgreement-2 and ephemeral gRPC streams for flicker-free updates.
+- **Pill Mode** — Collapsible minimal HUD for non-intrusive monitoring.
 
 ---
 
@@ -15,7 +15,7 @@ An AI-powered meeting assistant for Ubuntu that provides real-time speech transc
 - Ubuntu 20.04+ (PipeWire or PulseAudio)
 - Python 3.11+
 - NVIDIA GPU with CUDA (optional but recommended for local mode)
-- Google Cloud Project with Vertex AI and Speech-to-Text V2 APIs enabled
+- Google Cloud Project with Speech-to-Text V2 API enabled (for Chirp 2)
 
 ---
 
@@ -35,18 +35,17 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
  
-### 3. Authentication
+### 3. Authentication (Chirp 2 only)
 
-LiveRex uses Google Cloud for both Chirp 2 transcription and the AI Assistant (Vertex AI).
+LiveLex uses Application Default Credentials (ADC) for Google Cloud Speech-to-Text V2.
 
 1. **GCP Auth**: Set up Application Default Credentials:
    ```bash
    gcloud auth application-default login
    ```
-2. **Environment**: Create a `.env` file in the root:
+2. **Environment**: Create a `.env` file in the root if you need specific project overrides:
    ```bash
    GCP_PROJECT_ID=your-project-id
-   GCP_LOCATION=us-central1
    ```
 
 ---
@@ -60,14 +59,6 @@ Edit `config.yaml` to tune the pipeline. Key sections:
 |-----|---------|-------------|
 | `transcription.backend` | `local` | `local` or `chirp2` |
 | `transcription.language` | `en` | BCP-47 code: `en`, `ja`, `ko`, `zh` |
-
-### AI Assistant (Gemini)
-| Key | Default | Description |
-|-----|---------|-------------|
-| `assistant.enabled` | `true` | Show/hide the AI panel and detection logic |
-| `assistant.auto_detect` | `true` | Automatically answer detected questions |
-| `assistant.model` | `gemini-2.5-flash` | Model ID used for answering |
-| `assistant.system_prompt`| (Helpful assistant) | Instructions for the AI personality |
 
 ### UI & Audio
 | Key | Default | Description |
@@ -93,24 +84,21 @@ python main.py --save-transcript
 python main.py --debug
 ```
 
-Start a meeting call, then start LiveRex. Captions appear in the floating window.
+Start a meeting call, then start LiveLex. Captions appear in the floating window.
 
 ---
 
 ## Interactive Controls
 
 ### Mouse
-- **Ask AI**: Click any row in the **Transcript Panel** to manually trigger an AI answer for that specific text.
-- **Move**: Drag the top HUD bar (containing "LIVEREX") to reposition the window.
-- **Resize**: Drag edges or corners to resize the two-panel layout.
+- **Move**: Drag the top HUD bar (containing "LIVELEX") to reposition the window.
+- **Resize**: Drag edges or corners to resize the layout.
 - **Collapse**: Click the `—` button in the HUD to collapse into a minimal "Pill Mode".
-- **Toggle Answers**: Click the `‹` / `›` buttons to hide/show the AI panel.
 
 ### Global Hotkeys
-Available even when LiveRex is not focused:
+Available even when LiveLex is not focused:
 | Hotkey | Action |
 |--------|--------|
-| **Ctrl+Shift+A** | Force AI to answer the most recent speaker utterance |
 | **Ctrl+Shift+H** | Toggle overlay visibility (Hide/Show) |
 
 ---
@@ -123,9 +111,7 @@ AudioCapture (PipeWire monitor)
   → VADProcessor (Silero VAD)
       → on_utterance_end → StreamingTranscriber
   → StreamingTranscriber (LocalAgreement-2)
-      → on_text/on_newline → CaptionOverlay (Transcript Panel)
-      → on_newline → QuestionAnswerer (Gemini 2.5 Flash)
-          → add_answer → CaptionOverlay (AI Answers Panel)
+      → on_text/on_newline → CaptionOverlay (Transcript Display)
 ```
 
 See `ARCHITECTURE.md` for full system design.
@@ -158,7 +144,7 @@ local:
 ## Project structure
 
 ```
-LiveRex/
+livelex/
 ├── main.py                  ← entry point & pipeline wiring
 ├── config.yaml              ← tunable parameters
 ├── audio/
@@ -167,7 +153,6 @@ LiveRex/
 ├── transcription/
 │   ├── local.py             ← faster-whisper backend
 │   ├── chirp2.py            ← Google Chirp 2 backend
-│   ├── answerer.py          ← Gemini AI Assistant logic
 │   └── streaming.py         ← stabilization & agreement algorithm
 ├── ui/
 │   └── overlay.py           ← PyQt6 Massive Glass UI
