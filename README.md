@@ -2,6 +2,8 @@
 
 A high-fidelity real-time speech transcription tool for Ubuntu that captures audio from any browser or application (Google Meet, Zoom, etc.) and displays live captions in a floating glass overlay.
 
+![LiveLex Demo](https://raw.githubusercontent.com/SIMETRAL55/LiveLex/main/img/demo.gif)
+
 **Features:**
 - **Massive Glass UI** — Always-on-top, transparent floating display with modern dark aesthetic.
 - **Dual Backends** — Local (Whisper) for privacy or Google Chirp 2 for ultra-low latency.
