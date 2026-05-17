@@ -1,0 +1,251 @@
+19:24:06 [INFO] ══════════════════════════════════════════════════════════════
+19:24:06 [INFO]   Chirp 2 Stress Test  —  2026-05-15 19:24:06
+19:24:06 [INFO] ══════════════════════════════════════════════════════════════
+19:24:06 [INFO]   GCP project_id : meetbot-491611
+19:24:06 [INFO]   GCP location   : asia-northeast1
+19:24:06 [INFO]   GCP recognizer : projects/meetbot-491611/locations/asia-northeast1/recognizers/_
+19:24:06 [INFO]   Auth           : ADC (Application Default Credentials)
+19:24:06 [INFO]   Log file       : /home/alkris/projects/livelex/tests/stress_results.log
+19:24:06 [INFO] 
+19:24:06 [INFO] ══════════════════════════════════════════════════════════════
+19:24:06 [INFO]   SUITE 1: Latency Under Load
+19:24:06 [INFO] ══════════════════════════════════════════════════════════════
+19:24:10 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:24:10 [INFO]   Audio: 60s / 600 chunks at 100ms cadence
+19:25:11 [INFO]   Results received: 125  (interim=114  final=11)
+19:25:11 [INFO]   ┌────────────────────────────────────────────────────┐
+19:25:11 [INFO]   │ Metric              p50        p90        p95      │
+19:25:11 [INFO]   ├────────────────────────────────────────────────────┤
+19:25:11 [INFO]   │ Interim latency      26ms       91ms       95ms   │
+19:25:11 [INFO]   │ Final latency        67ms       90ms      200ms   │
+19:25:11 [INFO]   │ Latency spikes (>500ms gap): 17                    │
+19:25:11 [INFO]   └────────────────────────────────────────────────────┘
+19:25:11 [INFO]   → PASS ✓  results=125 spikes=17
+19:25:11 [INFO] 
+19:25:11 [INFO] 
+19:25:11 [INFO] ══════════════════════════════════════════════════════════════
+19:25:11 [INFO]   SUITE 2: Session Stability (25 minutes)
+19:25:11 [INFO] ══════════════════════════════════════════════════════════════
+19:25:11 [INFO]   Starting 25-minute stability run (VAD sim: speech 5–10s / silence 1–2.5s)...
+19:25:13 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:25:24 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:25:36 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:25:45 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:25:59 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:26:07 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:26:20 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:26:31 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:26:43 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:26:52 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:27:05 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:27:13 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:27:26 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:27:34 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:27:47 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:27:57 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:28:09 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:28:19 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:28:30 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:28:40 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:28:52 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:29:00 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:29:14 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:29:24 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:29:35 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:29:45 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:29:57 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:30:06 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:30:18 [INFO]   [T+5min] sessions_opened=28 errors=0 last_latency=3285ms
+19:30:19 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:30:27 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:30:40 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:30:51 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:31:03 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:31:12 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:31:25 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:31:35 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:31:47 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:31:55 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:32:09 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:32:19 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:32:31 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:32:41 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:32:52 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:33:01 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:33:14 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:33:22 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:33:36 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:33:46 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:33:57 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:34:07 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:34:19 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:34:27 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:34:40 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:34:48 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:35:01 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:35:12 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:35:22 [INFO]   [T+10min] sessions_opened=56 errors=0 last_latency=1438ms
+19:35:24 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:35:34 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:35:47 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:35:56 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:36:09 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:36:18 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:36:32 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:36:43 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:36:56 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:37:06 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:37:17 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:37:27 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:37:40 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:37:49 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:38:04 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:38:14 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:38:26 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:38:36 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:38:49 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:38:58 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:39:12 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:39:20 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:39:34 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:39:45 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:39:57 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:40:07 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:40:18 [INFO]   [T+15min] sessions_opened=82 errors=0 last_latency=4598ms
+19:40:20 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:40:29 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:40:42 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:40:51 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:41:05 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:41:15 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:41:28 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:41:39 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:41:50 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:42:00 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:42:13 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:42:22 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:42:37 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:42:47 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:42:59 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:43:10 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:43:22 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:43:31 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:43:45 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:43:53 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:44:07 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:44:18 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:44:30 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:44:40 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:44:53 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:45:02 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:45:13 [INFO]   [T+20min] sessions_opened=108 errors=0 last_latency=4858ms
+19:45:14 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:45:23 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:45:36 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:45:46 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:45:58 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:46:08 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:46:19 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:46:28 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:46:41 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:46:49 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:47:03 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:47:12 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:47:24 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:47:34 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:47:46 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:47:54 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:48:08 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:48:16 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:48:29 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:48:39 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:48:50 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:49:00 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:49:12 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:49:21 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:49:33 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:49:42 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:49:55 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:50:05 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:50:12 [INFO]   ── Stability Report ──────────────────────────────
+19:50:12 [INFO]   Total runtime:           25.0 min
+19:50:12 [INFO]   Sessions opened:         136
+19:50:12 [INFO]   Sessions closed cleanly: 136
+19:50:12 [INFO]   Unexpected disconnects:  0
+19:50:12 [INFO]   Error rate:              0.0%
+19:50:12 [INFO]   Errors by code:          (none)
+19:50:12 [INFO]   Any unrecovered failure: No
+19:50:12 [INFO]   → PASS ✓  sessions=136 errors=0 error_rate=0.0%
+19:50:12 [INFO] 
+19:50:12 [INFO] 
+19:50:12 [INFO] ══════════════════════════════════════════════════════════════
+19:50:12 [INFO]   SUITE 3: Reconnect / Recovery
+19:50:12 [INFO] ══════════════════════════════════════════════════════════════
+19:50:12 [INFO]   Trial 1/5 — streaming 10s normally...
+19:50:14 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:50:24 [INFO]   Trial 1/5 — forcing gRPC channel close...
+19:50:24 [INFO]   Trial 1/5 — starting recovery stream...
+19:50:25 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:50:41 [INFO]   Trial 1: RECOVERED in 4.55s [EXCEEDED 3s]
+19:50:41 [INFO]   Waiting 15s between trials...
+19:50:56 [INFO]   Trial 2/5 — streaming 10s normally...
+19:50:57 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:51:08 [INFO]   Trial 2/5 — forcing gRPC channel close...
+19:51:08 [INFO]   Trial 2/5 — starting recovery stream...
+19:51:09 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:51:24 [INFO]   Trial 2: RECOVERED in 4.50s [EXCEEDED 3s]
+19:51:24 [INFO]   Waiting 15s between trials...
+19:51:39 [INFO]   Trial 3/5 — streaming 10s normally...
+19:51:40 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:51:51 [INFO]   Trial 3/5 — forcing gRPC channel close...
+19:51:51 [INFO]   Trial 3/5 — starting recovery stream...
+19:51:52 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:52:08 [INFO]   Trial 3: RECOVERED in 4.66s [EXCEEDED 3s]
+19:52:08 [INFO]   Waiting 15s between trials...
+19:52:23 [INFO]   Trial 4/5 — streaming 10s normally...
+19:52:24 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:52:35 [INFO]   Trial 4/5 — forcing gRPC channel close...
+19:52:35 [INFO]   Trial 4/5 — starting recovery stream...
+19:52:36 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:52:51 [INFO]   Trial 4: RECOVERED in 4.71s [EXCEEDED 3s]
+19:52:51 [INFO]   Waiting 15s between trials...
+19:53:06 [INFO]   Trial 5/5 — streaming 10s normally...
+19:53:08 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:53:18 [INFO]   Trial 5/5 — forcing gRPC channel close...
+19:53:18 [INFO]   Trial 5/5 — starting recovery stream...
+19:53:19 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:53:35 [INFO]   Trial 5: RECOVERED in 4.74s [EXCEEDED 3s]
+19:53:35 [INFO]   ── Reconnect Report ──────────────────────────────
+19:53:35 [INFO]   Success rate:        5/5
+19:53:35 [INFO]   Mean recovery time:  4.63s
+19:53:35 [INFO]   Exceeded 3s:         5/5
+19:53:35 [INFO]   → PASS ✓  success=5/5 mean_recovery=4.63s
+19:53:35 [INFO] 
+19:53:35 [INFO] 
+19:53:35 [INFO] ══════════════════════════════════════════════════════════════
+19:53:35 [INFO]   SUITE 4: Audio Edge Cases
+19:53:35 [INFO] ══════════════════════════════════════════════════════════════
+19:53:35 [INFO]   Sub-case                                         Pass  Tokens  Exception
+19:53:35 [INFO]   ────────────────────────────────────────────────────────────────────────────────
+19:53:36 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:53:37 [INFO]   100ms pure silence (1 chunk)                     Y     0       (none)
+19:53:38 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:54:09 [INFO]   30s pure silence                                 Y     0       (none)
+19:54:10 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:54:16 [INFO]   5s clipped audio (all samples = ±1.0)            Y     0       (none)
+19:54:17 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:54:20 [INFO]   10×200ms utterances, 100ms gaps                  Y     0       (none)
+19:54:21 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:55:07 [INFO]   45s continuous (near session cap)                Y     118     (none)
+19:55:08 [INFO] Chirp2Transcriber ready (project=meetbot-491611  location=asia-northeast1  model=latest_long)
+19:55:09 [INFO]   500 chunks rapid-fire (no sleep)                 Y     0       (none)
+19:55:09 [INFO]   → PASS ✓  all sub-cases completed without exception
+19:55:09 [INFO] 
+19:55:09 [INFO] ══════════════════════════════════════════════════════════════
+19:55:09 [INFO]   FINAL RESULTS
+19:55:09 [INFO] ══════════════════════════════════════════════════════════════
+19:55:09 [INFO]   [PASS] Suite 1 — Latency Under Load
+19:55:09 [INFO]   [PASS] Suite 2 — Session Stability
+19:55:09 [INFO]   [PASS] Suite 3 — Reconnect/Recovery
+19:55:09 [INFO]   [PASS] Suite 4 — Audio Edge Cases
+19:55:09 [INFO] STRESS TEST: PASS
