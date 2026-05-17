@@ -9,7 +9,7 @@ import logging
 import os
 import time
 import queue as thread_queue
-from collections.abc import AsyncIterator
+from collections.abc import AsyncIterator, Callable
 from typing import Any
 
 import numpy as np
@@ -34,11 +34,18 @@ class Chirp2Transcriber(AbstractTranscriber):
 
     native_streaming: bool = True
 
-    def __init__(self, config: dict[str, Any]) -> None:
+    def __init__(
+        self,
+        config: dict[str, Any],
+        on_timing: Callable[[str, int, float], None] | None = None,
+        on_error: Callable[[Exception], None] | None = None,
+    ) -> None:
         self._project_id = os.getenv("GCP_PROJECT_ID", "")
         self._location = os.getenv("GCP_LOCATION", "asia-northeast1")
         self._recognizer_path = os.getenv("GCP_STT_RECOGNIZER", "")
         self._model = config["model"]
+        self._on_timing = on_timing
+        self._on_error = on_error
 
         if not self._project_id or not self._recognizer_path:
             logger.warning("GCP_PROJECT_ID or GCP_STT_RECOGNIZER not set in environment.")
@@ -145,6 +152,8 @@ class Chirp2Transcriber(AbstractTranscriber):
                                 time.sleep(sleep_needed)
 
                             logger.debug("GENERATOR: got chunk from pcm_queue, sending to Chirp2")
+                            if self._on_timing:
+                                self._on_timing("chunk_sent", chunks_sent, time.monotonic())
                             yield cloud_speech.StreamingRecognizeRequest(
                                 audio=float32_to_pcm16(chunk)
                             )
@@ -173,6 +182,8 @@ class Chirp2Transcriber(AbstractTranscriber):
                                 )
                                 interim_parts = []
                             logger.debug("Chirp 2 yielded: final=True, text=%r", text)
+                            if self._on_timing:
+                                self._on_timing("final", -1, time.monotonic())
                             asyncio.run_coroutine_threadsafe(output_queue.put(text), loop)
                         else:
                             interim_parts.append(text)
@@ -180,12 +191,16 @@ class Chirp2Transcriber(AbstractTranscriber):
                     if interim_parts:
                         combined = " ".join(interim_parts)
                         logger.debug("Chirp 2 yielded: final=False, combined=%r", combined)
+                        if self._on_timing:
+                            self._on_timing("interim", -1, time.monotonic())
                         asyncio.run_coroutine_threadsafe(
                             output_queue.put(f"[interim]{combined}"), loop
                         )
 
             except Exception as e:
                 logger.error("Chirp 2 blocking session error: %s", e)
+                if self._on_error:
+                    self._on_error(e)
             finally:
                 asyncio.run_coroutine_threadsafe(output_queue.put(None), loop)
 
